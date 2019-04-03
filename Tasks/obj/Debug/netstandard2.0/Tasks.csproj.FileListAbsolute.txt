@@ -1,0 +1,12 @@
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\bin\Debug\netstandard2.0\Tasks.deps.json
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\bin\Debug\netstandard2.0\Tasks.dll
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\bin\Debug\netstandard2.0\Tasks.pdb
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\Tasks.csprojAssemblyReference.cache
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\Tasks.csproj.CoreCompileInputs.cache
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\Tasks.AssemblyInfoInputs.cache
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\Tasks.AssemblyInfo.cs
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\Tasks.dll
+C:\Users\Niall\Documents\College\Third Year Semester 2\Mobile App Development\Tasks\Tasks\Tasks\obj\Debug\netstandard2.0\Tasks.pdb
