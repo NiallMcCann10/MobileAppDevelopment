@@ -1,0 +1,12 @@
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\bin\Debug\netstandard2.0\ToDo.deps.json
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\bin\Debug\netstandard2.0\ToDo.dll
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\bin\Debug\netstandard2.0\ToDo.pdb
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.csprojAssemblyReference.cache
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.csproj.CoreCompileInputs.cache
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.AssemblyInfoInputs.cache
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.AssemblyInfo.cs
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.dll
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.pdb
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\XamlC.stamp
