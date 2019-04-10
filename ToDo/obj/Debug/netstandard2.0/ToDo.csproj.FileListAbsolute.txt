@@ -9,4 +9,5 @@ C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.AssemblyInfo
 C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.AssemblyInfo.cs
 C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.dll
 C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\ToDo.pdb
-C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\Views\TasksDetailsPage.xaml.g.cs
+C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
