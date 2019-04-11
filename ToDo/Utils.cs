@@ -8,6 +8,6 @@ namespace ToDo
 {
     class MyUtils
     {
-        public const string JSON_DOGS_FILE = "Tasks.txt";
+        public const string JSON_TASKS_FILE = "Tasks.txt";
     }
 }

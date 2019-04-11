@@ -9,12 +9,17 @@ using Newtonsoft.Json;
 
 namespace ToDo.ViewModels
 {
-    class TasksViewModel : BaseViewModel
+    public class TasksViewModel : BaseViewModel
     {
-        public string Task { get; set; }
+        private string _task;
+        public string Task
+        {
+            get { return _task; }
+            set { SetValue(ref _task, value); }
+        }
 
         #region == Methods ==
-        public static ObservableCollection<TasksViewModel> ReadDogListData()
+        public static ObservableCollection<TasksViewModel> ReadTasksListData()
         {
             ObservableCollection<TasksViewModel> myList = new ObservableCollection<TasksViewModel>();
             string jsonText;
@@ -23,7 +28,7 @@ namespace ToDo.ViewModels
             {
                 string path = Environment.GetFolderPath(
                                 Environment.SpecialFolder.LocalApplicationData);
-                string filename = Path.Combine(path, MyUtils.JSON_DOGS_FILE);
+                string filename = Path.Combine(path, MyUtils.JSON_TASKS_FILE);
                 using (var reader = new StreamReader(filename))
                 {
                     jsonText = reader.ReadToEnd();
@@ -49,12 +54,12 @@ namespace ToDo.ViewModels
             return myList;
         }
 
-        public static void SaveDogListData(ObservableCollection<TasksViewModel> saveList)
+        public static void SaveTasksListData(ObservableCollection<TasksViewModel> saveList)
         {
             // need the path to the file
             string path = Environment.GetFolderPath(
                 Environment.SpecialFolder.LocalApplicationData);
-            string filename = Path.Combine(path, MyUtils.JSON_DOGS_FILE);
+            string filename = Path.Combine(path, MyUtils.JSON_TASKS_FILE);
             // use a stream writer to write the list
             using (var writer = new StreamWriter(filename, false))
             {

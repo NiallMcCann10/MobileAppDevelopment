@@ -17,15 +17,15 @@ namespace ToDo
             this.BindingContext = new MainPageViewModel(new PageService());
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void DeleteContext_Clicked(object sender, EventArgs e)
         {
-            TasksViewModel task = (sender as MenuItem).CommandParameter as TasksViewModel;
-            (BindingContext as MainPageViewModel).DeleteFromListCommand.Execute(task);
+            TasksViewModel Task = (sender as MenuItem).CommandParameter as TasksViewModel;
+            (BindingContext as MainPageViewModel).DeleteFromListCommand.Execute(Task);
         }
 
-        private void ToDoTaskSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void ToDoTaskSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await (BindingContext as MainPageViewModel).SelectOneDog(e.SelectedItem as TasksViewModel);
+            await (BindingContext as MainPageViewModel).SelectOneTask(e.SelectedItem as TasksViewModel);
         }
     }
 }

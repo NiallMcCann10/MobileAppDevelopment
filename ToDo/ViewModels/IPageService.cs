@@ -6,7 +6,7 @@ using Xamarin.Forms;
 
 namespace ToDo.ViewModels
 {
-    interface IPageService
+    public interface IPageService
     {
         Task PushAsnyc(Page page);
         Task<bool> DisplayAlert(string title, string message,

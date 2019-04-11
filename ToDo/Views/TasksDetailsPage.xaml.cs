@@ -15,10 +15,10 @@ namespace ToDo.Views
 	public partial class TasksDetailsPage : ContentPage
 	{
         TasksViewModel _task;
-        public TasksDetailsPage (TasksViewModel tasks)
+        public TasksDetailsPage (TasksViewModel task)
 		{
 			InitializeComponent();
-            _task = tasks;
+            _task = task;
             this.Title = _task.Task;
         }
 	}

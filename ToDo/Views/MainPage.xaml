@@ -13,6 +13,22 @@
             <Setter Property="CornerRadius" Value="7" />
             <Setter Property="BackgroundColor" Value="Red" />
         </Style>
+        <DataTemplate x:Key="TasksTemplate">
+            <ViewCell>
+                <ViewCell.ContextActions>
+                    <MenuItem Text="Delete" 
+                              Clicked="DeleteContext_Clicked"
+                              CommandParameter="{Binding .}"
+                              IsDestructive="True" />
+                </ViewCell.ContextActions>
+                <StackLayout Margin="2">
+                    <StackLayout Orientation="Horizontal" Margin="2, 1">
+                        <Label Text="Task: " />
+                        <Label Text="{Binding Path=Task}" />
+                    </StackLayout>
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
     </ContentPage.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -49,17 +65,19 @@
 
 
 
-        <StackLayout>
-            <Label Text="Task"/>
-            <Entry Placeholder="Enter Task here" />
-            <Button x:Name="btnAdd" Text="Add" Style="{StaticResource ButtonStyle}" 
-                    Clicked="Button_Clicked" Margin="2"/>
+        <StackLayout x:Name="slButtons" Orientation="Horizontal" 
+                     Margin="0, 2" Grid.Row="2" 
+                     Grid.Column="1">
+            <Button x:Name="btnSaveFile" Text="Save" 
+                    Style="{StaticResource ButtonStyle}"
+                    Command="{Binding SaveListCommand}"
+                    Margin="2" />
             <Button x:Name="btnDeleteOne" Text="Delete"
                     Style="{StaticResource ButtonStyle}"
                     Command="{Binding DeleteFromListCommand}"
                     CommandParameter="{Binding SelectedTask}"/>
         </StackLayout>
+        
 </Grid>
-
 
 </ContentPage>

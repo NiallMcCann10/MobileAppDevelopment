@@ -7,8 +7,8 @@ using Xamarin.Forms;
 
 namespace ToDo
 {
-	public interface IDatabaseConnection 
-	{
+    public interface IDatabaseConnection
+    {
         SQLite.SQLiteConnection DbConnection();
-	}
+    }
 }

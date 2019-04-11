@@ -19,7 +19,7 @@ namespace ToDo.ViewModels
         #region == Public Properties ==
         public ObservableCollection<TasksViewModel> TasksList
         {
-            get { return TasksList; }
+            get { return tasksList; }
             set { SetValue(ref tasksList, value); }
         }
         public TasksViewModel SelectedTask
@@ -49,22 +49,22 @@ namespace ToDo.ViewModels
             ReadList();
             ReadListCommand = new Command(ReadList);
             SaveListCommand = new Command(SaveList);
-            //DeleteFromListCommand = new Command<TasksViewModel>(DeleteFromList);
+            DeleteFromListCommand = new Command<TasksViewModel>(DeleteFromList);
         }
 
         private void SaveList()
         {
-            TasksViewModel.SaveDogListData(TasksList);
+            TasksViewModel.SaveTasksListData(TasksList);
         }
 
         private void ReadList()
         {
-            TasksList = TasksViewModel.ReadDogListData();
+            TasksList = TasksViewModel.ReadTasksListData();
         }
 
-        private void DeleteFromList(TasksViewModel d)
+        private void DeleteFromList(TasksViewModel t)
         {
-            TasksList.Remove(d);
+            TasksList.Remove(t);
             SelectedTask = null;
         }
 
@@ -75,13 +75,7 @@ namespace ToDo.ViewModels
 
             if (tasksList == null)
                 return;
-            //await Navigation.PushAsync(new DogDetailsPage(dog));
-            /*
-             * select a dog, go to the page
-             * no Navigation property in the view model
-             * member of the page class - same as the DisplayAlert
-             * Use an interface
-             */
+            
             await _pageService.PushAsnyc(new TasksDetailsPage(task));
 
         }
