@@ -35,7 +35,7 @@
         </DataTemplate>
     </ContentPage.Resources>
 
-    <StackLayout Margin="20">
+    <StackLayout Margin="40">
         <StackLayout Orientation="Horizontal">
             <Entry Placeholder="Create a Task" WidthRequest="700" Text="{Binding NewTaskValue}" HorizontalOptions="StartAndExpand"/>
             <Button x:Name="btnSaveFile" WidthRequest="300" Text="Create New Item" 
@@ -90,7 +90,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="btnDeleteOne" WidthRequest="300" Text="Delete List"
+        <Button x:Name="btnDeleteOne" WidthRequest="250" Text="Delete List"
                                     HorizontalOptions="EndAndExpand"
                                     Style="{StaticResource ButtonStyle}"
                                     Command="{Binding DeleteFromListCommand}"
