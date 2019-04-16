@@ -82,6 +82,19 @@ namespace ToDo.ViewModels
             SelectedTask = null;
         }
 
+        /*public async Switch IsToggled()
+        {
+            if (switch = true)
+                {
+                    status = "complete";
+                }
+            else
+            {
+                status = "Incomplete"
+            }
+        }*/
+
+
         public async Task SelectOneTask(TasksViewModel task)
         {
             // can't use a command directly as there is only a commandRefresh

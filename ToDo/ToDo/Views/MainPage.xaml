@@ -35,14 +35,16 @@
         </DataTemplate>
     </ContentPage.Resources>
 
-    <StackLayout>
-        <Entry Placeholder="Create a Task" Text="{Binding NewTaskValue}" HorizontalOptions="StartAndExpand"/>
-        <Button x:Name="btnSaveFile" Text="Create New Item" 
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal">
+            <Entry Placeholder="Create a Task" WidthRequest="700" Text="{Binding NewTaskValue}" HorizontalOptions="StartAndExpand"/>
+            <Button x:Name="btnSaveFile" WidthRequest="300" Text="Create New Item" 
                                     HorizontalOptions="EndAndExpand"
                                     Style="{StaticResource ButtonStyle}"
                                     Command="{Binding SaveListCommand}"
                                     Margin="2" />
-        
+        </StackLayout>
+
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
@@ -88,7 +90,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button x:Name="btnDeleteOne" Text="Delete List"
+        <Button x:Name="btnDeleteOne" WidthRequest="300" Text="Delete List"
                                     HorizontalOptions="EndAndExpand"
                                     Style="{StaticResource ButtonStyle}"
                                     Command="{Binding DeleteFromListCommand}"

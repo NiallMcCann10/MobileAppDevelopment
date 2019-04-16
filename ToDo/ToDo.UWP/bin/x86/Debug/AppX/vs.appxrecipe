@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\Niall\Desktop\ToDo\ToDo\ToDo.UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-04-16T10:46:02.676</Modified>
+      <Modified>2019-04-16T16:49:50.794</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Niall\Desktop\ToDo\ToDo\ToDo.UWP\bin\x86\Debug\ToDo.UWP.exe">
       <PackagePath>entrypoint\ToDo.UWP.exe</PackagePath>
-      <Modified>2019-04-16T10:46:01.385</Modified>
+      <Modified>2019-04-16T16:49:41.360</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niall\.nuget\packages\microsoft.data.sqlite.core\2.2.4\lib\netstandard2.0\Microsoft.Data.Sqlite.dll">
       <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
@@ -744,7 +744,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niall\Desktop\ToDo\ToDo\ToDo\bin\Debug\netstandard2.0\ToDo.dll">
       <PackagePath>ToDo.dll</PackagePath>
-      <Modified>2019-04-16T10:45:53.488</Modified>
+      <Modified>2019-04-16T16:49:21.771</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -895,11 +895,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niall\Desktop\ToDo\ToDo\ToDo.UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-04-16T10:46:00.800</Modified>
+      <Modified>2019-04-16T16:49:41.020</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niall\Desktop\ToDo\ToDo\ToDo.UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-04-16T10:46:00.801</Modified>
+      <Modified>2019-04-16T16:49:41.021</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -915,7 +915,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Niall\Desktop\ToDo\ToDo\ToDo.UWP\bin\x86\Debug\Core\ToDo.UWP.exe">
       <PackagePath>ToDo.UWP.exe</PackagePath>
-      <Modified>2019-04-16T10:46:02.647</Modified>
+      <Modified>2019-04-16T16:49:50.778</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
