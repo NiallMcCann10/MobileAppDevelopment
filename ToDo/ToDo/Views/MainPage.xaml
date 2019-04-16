@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ToDo"
+             x:Class="ToDo.MainPage">
+
+    <ContentPage.Resources>
+        <Style x:Key="EntryStyle" TargetType="Entry" >
+            <Setter Property="FontSize" Value="Small" />
+            <Setter Property="TextColor" Value="Blue" />
+        </Style>
+        <Style x:Key="ButtonStyle" TargetType="Button" >
+            <Setter Property="CornerRadius" Value="7" />
+            <Setter Property="BackgroundColor" Value="Red" />
+        </Style>
+        <DataTemplate x:Key="TasksTemplate">
+            <ViewCell>
+                <ViewCell.ContextActions>
+                    <MenuItem Text="Delete" 
+                              Clicked="DeleteContext_Clicked"
+                              CommandParameter="{Binding .}"
+                              IsDestructive="True" />
+                </ViewCell.ContextActions>
+                <StackLayout Margin="2">
+                    <StackLayout Orientation="Horizontal" Margin="2, 1">
+                        <Label Text="Task: " />
+                        <Label Text="{Binding Path=Task}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="2, 2">
+                        <Label Text="Status: " />
+                        <Label Text="{Binding Path=Status}" />
+                    </StackLayout>
+                </StackLayout>
+            </ViewCell>
+        </DataTemplate>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Entry Placeholder="Create a Task" Text="{Binding NewTaskValue}" HorizontalOptions="StartAndExpand"/>
+        <Button x:Name="btnSaveFile" Text="Create New Item" 
+                                    HorizontalOptions="EndAndExpand"
+                                    Style="{StaticResource ButtonStyle}"
+                                    Command="{Binding SaveListCommand}"
+                                    Margin="2" />
+        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Text="DoTo Item"
+                               Margin="0, 5"
+                               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+            <Label Text="DoTo Status"
+                               Margin="0, 5"
+                               Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+
+        </Grid>
+        <ListView x:Name="ToDoView" ItemsSource="{Binding TasksList, Mode=TwoWay}" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="3*" />
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="{Binding Task}" Grid.Row="0" Grid.Column="0"/>
+                            <Label Text="{Binding Status}" Grid.Row="0" Grid.Column="1"/>
+                            <Switch IsToggled="False" Grid.Row="0" Grid.Column="3" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnDeleteOne" Text="Delete List"
+                                    HorizontalOptions="EndAndExpand"
+                                    Style="{StaticResource ButtonStyle}"
+                                    Command="{Binding DeleteFromListCommand}"
+                                    CommandParameter="{Binding SelectedTask}"/>
+    </StackLayout>
+</ContentPage>

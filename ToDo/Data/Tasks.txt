@@ -1,6 +1,0 @@
-﻿[
-{"Task": "Apples"},
-{"Task": "Oranges"},
-{"Task": "Clothes"},
-{"Task": "Car Wash"}
-]
