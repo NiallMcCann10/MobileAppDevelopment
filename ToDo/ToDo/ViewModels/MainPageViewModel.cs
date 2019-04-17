@@ -46,6 +46,7 @@ namespace ToDo.ViewModels
         public ICommand ReadListCommand { get; private set; }
         public ICommand SaveListCommand { get; private set; }
         public ICommand DeleteFromListCommand { get; private set; }
+        public ICommand DeleteListCommand { get; private set; }
         public ICommand ToggleSwitchedCommand { get; private set; }
         //public string Status { get; private set; }
         #endregion
@@ -59,6 +60,7 @@ namespace ToDo.ViewModels
             ReadListCommand = new Command(ReadList);
             SaveListCommand = new Command(SaveList);
             DeleteFromListCommand = new Command<TasksViewModel>(DeleteFromList);
+            DeleteListCommand = new Command(DeleteList);
             ToggleSwitchedCommand = new Command<TasksViewModel>(ToggleSwitched);
         }
 
@@ -76,6 +78,13 @@ namespace ToDo.ViewModels
         private void ReadList()
         {
             TasksList = TasksViewModel.ReadTasksListData();
+        }
+
+        private void DeleteList()
+        {
+            TasksList.Clear();
+            TasksViewModel.WriteToTaskList(TasksList);
+            ReadList();
         }
 
         private void DeleteFromList(TasksViewModel t)

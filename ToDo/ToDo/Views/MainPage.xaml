@@ -92,7 +92,7 @@
         <Button x:Name="btnDeleteOne" WidthRequest="250" Text="Delete List"
                                     HorizontalOptions="Center"
                                     Style="{StaticResource ButtonStyle}"
-                                    Command="{Binding DeleteFromListCommand}"
-                                    CommandParameter="{Binding SelectedTask}"/>
+                                    Command="{Binding DeleteListCommand}"
+                                    CommandParameter="{Binding .}"/>
     </StackLayout>
 </ContentPage>
