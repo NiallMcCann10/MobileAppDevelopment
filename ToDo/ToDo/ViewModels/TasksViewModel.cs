@@ -50,11 +50,30 @@ namespace ToDo.ViewModels
             return myList;
         }
 
-        public static void SaveTasksListData(TasksViewModel saveList)
+        public static void UpdateTasksListData(TasksViewModel updatedTask)
         {
             ObservableCollection<TasksViewModel> tasksList = ReadTasksListData();
-            tasksList.Add(saveList);
-            // need the path to the file
+            foreach (var task in tasksList)
+            {
+                if(task.Task == updatedTask.Task)
+                {
+                    task.Status = updatedTask.Status;
+                }
+            }
+
+            WriteToTaskList(tasksList);
+        }
+
+        public static void SaveTasksListData(TasksViewModel newTask)
+        {
+            ObservableCollection<TasksViewModel> tasksList = ReadTasksListData();
+            tasksList.Add(newTask);
+
+            WriteToTaskList(tasksList);
+        }
+
+        public static void WriteToTaskList(ObservableCollection<TasksViewModel> tasksList)
+        {
             string path = Environment.GetFolderPath(
                 Environment.SpecialFolder.LocalApplicationData);
             string filename = Path.Combine(path, MyUtils.JSON_TASKS_FILE);

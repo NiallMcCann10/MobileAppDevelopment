@@ -27,5 +27,25 @@ namespace ToDo
         {
             await (BindingContext as MainPageViewModel).SelectOneTask(e.SelectedItem as TasksViewModel);
         }
+
+        private void Switch_Toggled(object sender, EventArgs e)
+        {
+            if (BindingContext == null)
+            { return; }
+
+            var taskButton = (Button)sender;
+            var taskObject = taskButton.BindingContext as TasksViewModel;
+            (BindingContext as MainPageViewModel).ToggleSwitchedCommand.Execute(taskObject);
+        }
+
+        private void Delete_Item(object sender, EventArgs e)
+        {
+            if (BindingContext == null)
+            { return; }
+
+            var taskButton = (Button)sender;
+            var taskObject = taskButton.BindingContext as TasksViewModel;
+            (BindingContext as MainPageViewModel).DeleteFromListCommand.Execute(taskObject);
+        }
     }
 }

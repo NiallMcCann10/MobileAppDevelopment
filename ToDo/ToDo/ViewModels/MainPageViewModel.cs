@@ -15,6 +15,7 @@ namespace ToDo.ViewModels
         private ObservableCollection<TasksViewModel> tasksList;
         private TasksViewModel selectedTask;
         private string newTaskValue;
+        //private Command toggleSwitchedCommand = new Command(ToggleSwitchedCommand);
         #endregion
 
         #region == Public Properties ==
@@ -37,7 +38,6 @@ namespace ToDo.ViewModels
             get { return newTaskValue; }
             set { SetValue(ref newTaskValue, value); }
         }
-
         #endregion
 
         #region == Command Properties ==
@@ -46,6 +46,8 @@ namespace ToDo.ViewModels
         public ICommand ReadListCommand { get; private set; }
         public ICommand SaveListCommand { get; private set; }
         public ICommand DeleteFromListCommand { get; private set; }
+        public ICommand ToggleSwitchedCommand { get; private set; }
+        //public string Status { get; private set; }
         #endregion
 
         #region == public events ==
@@ -57,6 +59,7 @@ namespace ToDo.ViewModels
             ReadListCommand = new Command(ReadList);
             SaveListCommand = new Command(SaveList);
             DeleteFromListCommand = new Command<TasksViewModel>(DeleteFromList);
+            ToggleSwitchedCommand = new Command<TasksViewModel>(ToggleSwitched);
         }
 
         private void SaveList()
@@ -73,13 +76,29 @@ namespace ToDo.ViewModels
         private void ReadList()
         {
             TasksList = TasksViewModel.ReadTasksListData();
-            SelectedTask = null;
         }
 
         private void DeleteFromList(TasksViewModel t)
         {
             TasksList.Remove(t);
-            SelectedTask = null;
+            TasksViewModel.WriteToTaskList(TasksList);
+            ReadList();
+        }
+
+        public void ToggleSwitched(TasksViewModel t)
+        {
+            var newTaskObject = t;
+            if (newTaskObject.Status == "Complete")
+            {
+                newTaskObject.Status = "Incomplete";
+            }
+            else
+            {
+                newTaskObject.Status = "Complete";
+            }
+
+            TasksViewModel.UpdateTasksListData(newTaskObject);
+            ReadList();
         }
 
         /*public async Switch IsToggled()
