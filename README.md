@@ -14,6 +14,8 @@ Damiens Moodle Page<br></br>
 
 https://developer.xamarin.com/samples/xamarin-forms/Todo/<br>
 
+https://developer.xamarin.com/samples/mobile/TaskyPortable/<br>
+
 https://www.youtube.com/watch?v=zS6aRfwXtII<br>
 
 https://msdn.microsoft.com/en-us/magazine/mt736454.aspx<br>
